@@ -9,15 +9,15 @@ O processamento de linguagem natural é um ramo da inteligência artificial que 
 O machine learning é o subconjunto da inteligência artificial, que se concentra na construção de sistemas que aprendem, ou melhoram o desempenho, com base nos dados que consomem.
 
 
-#### Pyttsx3 é responsável pela sintetização de voz do áudiobook, a voz que vai ser usada por padrão, será do mesmo idioma que está configurado o sistema operacional.
+#### Pyttsx3 é responsável pela sintetização de voz do áudiobook. A voz que vai ser usada por padrão será do mesmo idioma da configuração do sistema operacional.
 
-Para trocar o idioma da voz, primeiro vamos instanciar um objeto do **pyttsx3**, começamos armazenando em uma variável:
+Para trocar o idioma da voz, primeiro vamos instanciar um objeto do **pyttsx3**. Começamos armazenando em uma variável:
 
 ````python
 engine = pyttsx3.init()
 ````
 
-Com o método **setProperty()** temos várias configurações que podemos fazer, e um deles é alterar a voz que será usada no audiobook. Usamos como parâmetro o idioma que queremos que seja produzido.
+Com o método **setProperty()** temos várias configurações que podemos fazer, sendo uma deles alterar a voz que será usada no audiobook. Usamos como parâmetro o idioma que queremos que seja produzido.
 
 ````python
 engine.setProperty(“voice”, “brazil”)
@@ -51,7 +51,7 @@ engine.say(‘Meu nome é Mario’, ’teste.mp3’)
 engine.runAndWait()
 ````
 
-Para gerar um audiobook usando o texto de um arquivo pdf, devemos extrair o texto do arquivo, usando o método pdfplumber.open(), como parâmetro o nome do arquivo pdf e armazenado em uma variável.
+Para gerar um audiobook usando o texto de um arquivo pdf, devemos extrair o texto do arquivo, usando o método **pdfplumber.open()**, como parâmetro o nome do arquivo pdf e armazenado em uma variável.
 
 ````python
 pdf = pdfplumber.open(‘O nome do arquivo.pdf’)
